@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Join Our Family</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form  (ngSubmit)="join(user)">
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>First Name</ion-label>
+        <ion-input type="text" name="first_name" [(ngModel)]="user.first_name" placeholder="" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Last Name</ion-label>
+        <ion-input type="text" name="last_name" [(ngModel)]="user.last_name" placeholder="" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Age</ion-label>
+        <ion-input type="number" name="age" [(ngModel)]="user.age" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Home City</ion-label>
+        <ion-input type="text" name="home_city" [(ngModel)]="user.home_city" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Mobile</ion-label>
+        <ion-input type="number" name="mobile" [(ngModel)]="user.mobile" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Church</ion-label>
+        <ion-input type="text" name="church" [(ngModel)]="user.church" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Faculty</ion-label>
+        <ion-select [(ngModel)]="user.faculty" name="faculty">
+            <ion-option value="ENG">Engineering</ion-option>
+            <ion-option value="MET">MET</ion-option>
+            <ion-option value="IET">IET</ion-option>
+            <ion-option value="EMS">EMS</ion-option>
+            <ion-option value="CIVIL">Civil</ion-option>
+            <ion-option value="ARCH">Architecture</ion-option>
+            <ion-option value="PHARM">Pharmacy</ion-option>
+            <ion-option value="APP">Applied arts</ion-option>
+            <ion-option value="MNG">Management</ion-option>
+            <ion-option value="BI">BI</ion-option>
+            <ion-option value="LAW">Law</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Select your class</ion-label>
+        <ion-select [(ngModel)]="user.dash" name="dash">
+          <ion-option value="40">43-</ion-option>
+          <ion-option value="40">40-</ion-option>
+          <ion-option value="37">37-</ion-option>
+          <ion-option value="34">34-</ion-option>
+          <ion-option value="31">31-</ion-option>
+          <ion-option value="28">28-</ion-option>
+          <ion-option value="25">25-</ion-option>
+          <ion-option value="22">22-</ion-option>
+          <ion-option value="19">19-</ion-option>
+          <ion-option value="16">16-</ion-option>
+          <ion-option value="13">13-</ion-option>
+          <ion-option value="10">10-</ion-option>
+          <ion-option value="7">7-</ion-option>
+          <ion-option value="4">4-</ion-option>
+          <ion-option value="1">1-</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+<button ion-button type="submit" block>Join</button>
+
+
+  </form>
+</ion-content>

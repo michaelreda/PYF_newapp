@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon name="md-menu"></ion-icon></button> 
+    <ion-title text-center>Upcoming Events</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="separatingBG">
+  <ion-card (click)="show_event_details=!show_event_details">
+    <ion-card-header>
+      <div>Summer Camp</div>
+      <p end>7/8/2017</p>
+    </ion-card-header> 
+    <ion-card-content *ngIf="show_event_details">
+      It's the most wonderful time of the year! Once we’ve had our fill of turkey and welcomed the holiday season properly, we're constantly encouraged to get into the Spirit of the Season. This phrase is most heavily tied to Christmas in particular, but it would be hard to deny that similar themes aren't attached to other December holidays.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="show_event_details2=!show_event_details2">
+    <ion-card-header>
+      <div>Graduation Party</div>
+      <p end>29/9/2017</p>
+    </ion-card-header> 
+    <ion-card-content *ngIf="show_event_details2">
+      It's the most wonderful time of the year! Once we’ve had our fill of turkey and welcomed the holiday season properly, we're constantly encouraged to get into the Spirit of the Season. This phrase is most heavily tied to Christmas in particular, but it would be hard to deny that similar themes aren't attached to other December holidays.
+    </ion-card-content>
+  </ion-card>
+
+   
+</ion-content>

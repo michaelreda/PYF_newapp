@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon name="md-menu"></ion-icon></button>
+    <ion-title text-center>Edit Member</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (ngSubmit)="edit()">
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Comments</ion-label>
+        <ion-textarea name="comments" [(ngModel)]="comments" placeholder=""></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>Fish</ion-label>
+        <ion-select [(ngModel)]="fish" name="fish" multiple="true" cancelText="cancel" okText="Okay!">
+          <ion-option value="Michael">Michael</ion-option>
+          <ion-option value="John">John</ion-option>
+          <ion-option value="David">David</ion-option>
+          <ion-option value="Philo">Philo</ion-option>
+          <ion-option value="Mark">Mark</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button type="submit" block>Edit</button>
+
+  </form>
+
+</ion-content>

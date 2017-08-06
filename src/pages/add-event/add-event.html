@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon name="md-menu"></ion-icon></button> 
+    <ion-title text-center>Add Event</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  <form  (ngSubmit)="add_event()">
+
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Title</ion-label>
+        <ion-input type="text" name="title" [(ngModel)]="title" placeholder="" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Details</ion-label>
+        <ion-textarea name="details" [(ngModel)]="details" row="5" placeholder=""></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Date</ion-label>
+        <ion-input type="date" name="date" [(ngModel)]="date" placeholder=""></ion-input>
+      </ion-item>
+
+    </ion-list>
+<style>
+  textarea.text-input.text-input-md{
+    height:40vw;
+  }
+</style>
+
+<button ion-button type="submit" block>Add</button>
+
+
+  </form>
+</ion-content>

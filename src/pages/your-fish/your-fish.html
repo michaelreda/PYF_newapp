@@ -1,0 +1,40 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon name="md-menu"></ion-icon></button>
+    <ion-title text-center>PYF Members</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="separatingBG">
+  <ion-card (click)="show_fish_details=!show_fish_details">
+    <ion-card-header>
+      <div>Michael Reda</div>
+      <p>34- MET</p>
+    </ion-card-header> 
+    <ion-card-content *ngIf="show_fish_details">
+      Age: 21 <br>
+      Church: st. Mark <br>
+      Mobile: 01227047648 <a href="tel:01227047648">call?</a> <br>
+      Home city: Cairo
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="show_fish_details2=!show_fish_details2">
+     <ion-card-header>
+      <div>John Hany</div>
+      <p>31- Arch</p>
+    </ion-card-header> 
+    <ion-card-content *ngIf="show_fish_details2">
+      Age: 22 <br>
+      Church: Mary and Athansius <br>
+      Mobile: 01227047648 <a href="tel:01227047648">call?</a> <br>
+      Home city: Cairo
+    </ion-card-content>
+  </ion-card>
+
+   
+</ion-content>
